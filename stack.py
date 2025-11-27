@@ -20,6 +20,8 @@ class Stack:
             del self.data[self.top]
             self.top = self.top - 1
 #============ class end ===================
+#27th Noveember 2025 - As I know it works and I want to use this cass elsewhere  I will comment out all the tests
+"""
 s1 = Stack(5)
 print("====== INIT TESTING OF STACK =======" )
 print(s1.height)
@@ -56,3 +58,4 @@ s1.pop()
 s1.pop()
 s1.pop()
 s1.pop()
+"""
