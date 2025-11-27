@@ -17,8 +17,11 @@ class Stack:
         if(self.top == -1):
             print('nothing to pop')
         else:
+            #save the value so I can run the logic and still return the value
+            returned_value = self.data[self.top]
             del self.data[self.top]
             self.top = self.top - 1
+            return returned_value
 #============ class end ===================
 #27th Noveember 2025 - As I know it works and I want to use this cass elsewhere  I will comment out all the tests
 """
