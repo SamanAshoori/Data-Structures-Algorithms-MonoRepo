@@ -22,6 +22,15 @@ class Stack:
             del self.data[self.top]
             self.top = self.top - 1
             return returned_value
+    
+    def is_empty(self):
+        if self.top == -1:
+            return True
+        else:
+            return False
+        
+    def peek(self):
+        return  self.data[self.top]
 #============ class end ===================
 #27th Noveember 2025 - As I know it works and I want to use this cass elsewhere  I will comment out all the tests
 """
