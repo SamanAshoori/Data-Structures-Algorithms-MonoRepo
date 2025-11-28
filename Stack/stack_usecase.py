@@ -2,7 +2,7 @@
 #Balanced Parenthesis Checker
 #The problem - given a string of chars - determine if brackets, braces etc are balanced
 #Useful for compiler logic
-from stack import Stack
+from Stack.stack import Stack
 
 def parenthesis_checker(input):
     s1 = Stack(len(input))
