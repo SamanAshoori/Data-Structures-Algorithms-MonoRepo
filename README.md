@@ -2,9 +2,10 @@
 
 This project is a hands-on exercise to build a fundamental data structure, the Stack, from scratch in Python. It also includes a practical application of the Stack to solve the classic "Balanced Parentheses" problem.
 
+
 ## My Learning Journey
 
-The primary goal of this project was to deepen my understanding of data structures by moving from theoretical knowledge to practical implementation. Building the Stack class and then immediately using it to solve a problem helped solidify concepts like LIFO (Last-In, First-Out) and how a stack's methods (`push`, `pop`, `peek`) are used in algorithms.
+The primary goal of this project was to deepen my understanding of data structures by moving from knowledge to practical implementation. Building the Stack class and then immediately using it to solve a problem helped solidify concepts like LIFO (Last-In, First-Out) and how a stack's methods (`push`, `pop`, `peek`) are used in algorithms.
 
 ### The Power of Debugging
 
@@ -45,13 +46,3 @@ The function `parenthesis_checker(input)` takes a string and determines if the b
 4.  If the character on top is the corresponding opening bracket, the script **pops** it from the stack, effectively canceling out the pair.
 5.  If the stack is empty when a closing bracket is found, or if the peeked character is not the correct opening bracket, the string is declared unbalanced.
 6.  After the entire string has been processed, if the stack is empty, it means every bracket was correctly matched and the string is **balanced**. If the stack is not empty, it means there are unmatched opening brackets, and the string is **unbalanced**.
-
-## How to Run
-
-To see the checker in action, simply run the `stack_usecase.py` file:
-
-```bash
-python d:\Development\stack_implementation\stack_usecase.py
-```
-
-This will run the `parenthesis_checker` function with a few sample strings and print the results (`Pass` or `Fail`) to the console.

@@ -15,18 +15,24 @@ def parenthesis_checker(input):
                 s1.push(x)
             # Close Bracket Check
             elif(ord(x) == 41):
+                if(s1.top == -1):
+                    return 'Fail - Closing with nothing open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 40):
                     s1.pop()
                 else:
                     return 'Fail - Incorrect Closing'
             elif(ord(x) == 93):
+                if(s1.top == -1):
+                    return 'Fail - Closing with nothing open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 91):
                     s1.pop()
                 else:
                     return 'Fail - Incorrect Closing'
             elif(ord(x) == 125):
+                if(s1.top == -1):
+                    return 'Fail - Closing with nothing open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 123):
                     s1.pop()
@@ -49,8 +55,12 @@ input_string1 = "[{()}]" #Pass the test
 input_string2 = "((()})" #fail (mixed values)
 input_string3 = "((())" #fail (missing closing)
 input_string4 = "" #fail (empty)
+input_string5 = ")())" #fail (starts with a closing)
+input_string6 = "()))" #fail (ends with 3 closing)
 
 print(parenthesis_checker(input_string1))
 print(parenthesis_checker(input_string2))
 print(parenthesis_checker(input_string3))
 print(parenthesis_checker(input_string4))
+print(parenthesis_checker(input_string5))
+print(parenthesis_checker(input_string6))
