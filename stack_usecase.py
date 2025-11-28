@@ -16,7 +16,7 @@ def parenthesis_checker(input):
             # Close Bracket Check
             elif(ord(x) == 41):
                 if(s1.top == -1):
-                    return 'Fail - Closing with nothing open'
+                    return 'Fail - Closing without an open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 40):
                     s1.pop()
@@ -24,7 +24,7 @@ def parenthesis_checker(input):
                     return 'Fail - Incorrect Closing'
             elif(ord(x) == 93):
                 if(s1.top == -1):
-                    return 'Fail - Closing with nothing open'
+                    return 'Fail - Closing without an open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 91):
                     s1.pop()
@@ -32,7 +32,7 @@ def parenthesis_checker(input):
                     return 'Fail - Incorrect Closing'
             elif(ord(x) == 125):
                 if(s1.top == -1):
-                    return 'Fail - Closing with nothing open'
+                    return 'Fail - Closing without an open'
                 peeked_char = s1.peek()
                 if(ord(peeked_char) == 123):
                     s1.pop()
