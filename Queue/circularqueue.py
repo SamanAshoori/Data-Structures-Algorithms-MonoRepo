@@ -17,4 +17,4 @@ class CircQueue:
             return True
 
 q1 = CircQueue(4)
-q1.enqueue(4)
+print(q1.enqueue(4))
