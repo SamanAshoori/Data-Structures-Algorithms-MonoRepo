@@ -1,5 +1,5 @@
-class Queue:
-    def init(self,size):
+class CircQueue:
+    def __init__(self,size:int):
         self.size = size
         self.front = -1
         self.tail = -1
@@ -16,5 +16,5 @@ class Queue:
             self.isEmpty = False
             return True
 
-q1 = Queue(4)
+q1 = CircQueue(4)
 q1.enqueue(4)
