@@ -19,30 +19,30 @@ class CircQueue:
         return True
 
     def dequeue(self) -> bool:
-        if self.head == -1:
+        if self.front == -1:
             return False
         
-        if self.head == self.tail:
-            self.head = -1
+        if self.front == self.tail:
+            self.front = -1
             self.tail = -1
             return True
         
-        self.head = (self.head + 1) % self.size
+        self.front = (self.front + 1) % self.size
         return True
     
     def Front(self) -> int:
-        if self.head == -1: return -1
-        return self.data[self.head]
+        if self.front == -1: return -1
+        return self.data[self.front]
     
     def Rear(self) -> int:
         if self.tail == -1: return -1
         return self.queue[self.tail]
         
     def isEmpty(self) -> bool:
-        return self.head == -1
+        return self.front == -1
         
     def isFull(self) -> bool:
-        return ((self.tail + 1) % self.size) == self.head
+        return ((self.tail + 1) % self.size) == self.front
 
         
 
