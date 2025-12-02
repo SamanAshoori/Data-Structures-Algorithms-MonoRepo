@@ -23,6 +23,7 @@ class CircQueue:
         else:
             self.tail = self.tail + 1
             self.data[self.tail] = input
+            return True
 
     def dequeue(self) -> bool:
         if(self.isEmpty):
@@ -30,8 +31,10 @@ class CircQueue:
         elif(self.front == self.tail):
             self.front = -1
             self.tail = -1
+            return True
         else:
             self.front = (self.front + 1) % self.size
+            return True
 
 
 
