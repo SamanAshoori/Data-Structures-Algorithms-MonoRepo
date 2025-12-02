@@ -3,38 +3,48 @@ class CircQueue:
         self.size = size
         self.front = -1
         self.tail = -1
-        self.isEmpty = True
-        self.isFull = False
         #To simulate C++ memory management
         self.data = ['None'] * size
     
     def enqueue(self,input:int) -> bool:
         #input a int but return a boolean value
-        if(self.isEmpty):
-            self.front = self.front + 1
-            self.tail = self.tail + 1
-            self.data[self.tail] = input
-            self.isEmpty = False
-            return True
-        elif(self.isFull):
-            return  False
-        elif((self.tail+1) % self.size == self.front):
+        if((self.tail + 1) % self.size) == self.front:
             return False
-        else:
-            self.tail = self.tail + 1
-            self.data[self.tail] = input
-            return True
+        
+        if self.front == -1:
+            self.front = 0
+        
+        self.tail = (self.tail + 1) % self.size
+        self.data[self.tail] = input
+        return True
 
     def dequeue(self) -> bool:
-        if(self.isEmpty):
+        if self.head == -1:
             return False
-        elif(self.front == self.tail):
-            self.front = -1
+        
+        if self.head == self.tail:
+            self.head = -1
             self.tail = -1
             return True
-        else:
-            self.front = (self.front + 1) % self.size
-            return True
+        
+        self.head = (self.head + 1) % self.size
+        return True
+    
+    def Front(self) -> int:
+        if self.head == -1: return -1
+        return self.data[self.head]
+    
+    def Rear(self) -> int:
+        if self.tail == -1: return -1
+        return self.queue[self.tail]
+        
+    def isEmpty(self) -> bool:
+        return self.head == -1
+        
+    def isFull(self) -> bool:
+        return ((self.tail + 1) % self.size) == self.head
+
+        
 
 
 
