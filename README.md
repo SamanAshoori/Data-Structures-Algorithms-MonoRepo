@@ -35,4 +35,4 @@ This is a monorepo. Projects are categorized by language, rather than isolated r
 
 ## A Note on Generative AI
 
-As I am relearning academia level computer science solo - I utilize Generative AI as a rigorous Socratic tutor to review code quality and architecture. While AI tools (like the one used to format this README) handle administrative overhead, the code implementation is manual. The value of this repository lies in the struggle of implementation, not the speed of completion.
+While AI tools (like the one used to format this README) handle administrative overhead, the code implementation is manual. The value of this repository lies in the struggle of implementation, not the speed of completion.
