@@ -25,7 +25,8 @@ public:
             std::cout << "Stack Overflow" << std::endl;
             return;
         }
-        arr[++top] = input;
+        top++;
+        arr[top] = input;
     }
 
     void pop(){
@@ -33,7 +34,7 @@ public:
             std::cout << "Nothing to pop" << std::endl;
             return;
         }
-        --top;
+        top--;
     }
 
     void peek() const {
