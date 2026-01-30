@@ -1,6 +1,5 @@
 #Welcome to the Stack Implementation in Python
 class Stack:
-#======== class start ==========
     def __init__(self, height):
         self.height = height
         self.top = -1
@@ -8,10 +7,11 @@ class Stack:
     
     def push(self,x):
         if(self.top == (self.height - 1)):
-            print('!!!!!!   Cannot Push - stack is full  !!!!!!!!!')
+            print('stack is full')
         else:
             self.top = self.top + 1
             self.data.insert(self.top, x)
+            #Note for Python you can just use self.data.append(x) - however I wanted to keep the logic similar to other languages
     
     def pop(self):
         if(self.top == -1):
@@ -22,7 +22,7 @@ class Stack:
             del self.data[self.top]
             self.top = self.top - 1
             return returned_value
-    
+            #note in Python you can just use self.data.pop() - same as above
     def is_empty(self):
         if self.top == -1:
             return True
@@ -31,43 +31,10 @@ class Stack:
         
     def peek(self):
         return  str(self.data[self.top])
-#============ class end ===================
-#27th Noveember 2025 - As I know it works and I want to use this cass elsewhere  I will comment out all the tests
-"""
-s1 = Stack(5)
-print("====== INIT TESTING OF STACK =======" )
-print(s1.height)
-print(s1.top)
-print(s1.data)
-#test to see if it works
-s1.push(12)
-s1.push("42")
-s1.push(True)
-s1.push(1)
-s1.push(2)
-#Max should be achieved
-print("====== Error Testing =======" )
-s1.push('should output stack is full')
-s1.push('should output stack is full')
-s1.push('should output stack is full')
-#Perfect
-print("===============" )
-print("height of stack is "  + str(s1.top))
-print("top of stack is "  + str(s1.data[s1.top]))
-print("data in stack is" + str(s1.data))
-print("====== Popping Time =======" )
-#Time to see if popping works now
-s1.pop()
-s1.pop()
-print("height of stack is "  + str(s1.top))
-print("top of stack is "  + str(s1.data[s1.top]))
-print("data in stack is" + str(s1.data))
-print("====== More Popping Below =======" )
-s1.pop()
-s1.pop()
-s1.pop()
-#Below should output error code
-s1.pop()
-s1.pop()
-s1.pop()
-"""
+    
+    def display(self):
+        if(self.top == -1):
+            return('stack is empty')
+        else:
+           return self.data[:self.top + 1]
+    
