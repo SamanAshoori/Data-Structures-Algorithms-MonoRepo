@@ -55,6 +55,20 @@ public:
         }
         std::cout << std::endl;
     }
+
+    void copy_and_resize(int new_size) {
+        if(new_size <= size){
+            std::cout << "New size must be greater than current size" << std::endl;
+            return;
+        }
+        T* new_arr = new T[new_size];
+        for(int i = 0; i <= top; ++i){
+            new_arr[i] = arr[i];
+        }
+        delete[] arr;
+        arr = new_arr;
+        size = new_size;
+    }
 };
 
 int main(){
