@@ -11,7 +11,7 @@ private:
 public:
     //constructors and destructors
     Stack(int s) : size(s), top(-1), arr(new T[s]) {}
-    //destructor to free allocated mem
+    //destructor to free allocated memory
     ~Stack() {
         delete[] arr;
     }
