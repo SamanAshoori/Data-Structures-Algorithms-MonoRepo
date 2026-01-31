@@ -22,7 +22,7 @@ public:
 
     void push(T input){
         if(top == size - 1){
-            std::cout << "Stack Overflow" << std::endl;
+            std::cout << "Stack is full" << std::endl;
             return;
         }
         top++;
